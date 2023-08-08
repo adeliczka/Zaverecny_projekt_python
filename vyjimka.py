@@ -15,9 +15,12 @@ class OsetreniVyjimek:
         chybne = True
         while chybne:
             try:
+                # Kód, který může vyvolat výjimku
                 zadani = int(input(vstup_uzivatele))
                 chybne = False
             except ValueError:
+                # Reakce na výjimku ValueError
                 print(chybova_hlaska)
             else:
+                # Provede se, pokud v bloku try nevznikla výjimka
                 return zadani
