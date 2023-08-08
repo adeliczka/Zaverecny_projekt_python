@@ -42,8 +42,10 @@ class TextKonzoloveAplikace:
                 # Přidání pojištěnce
                 jmeno = input("Zadejte jméno pojištěného: ")
                 prijmeni = input("Zadejte příjmení pojištěného: ")
-                vek = osetreni_vyjimek.zadej_cislo("Zadejte věk uživatele: ", "Neplatné zadání. Je možné zadat pouze číslice, nikoliv písmena.\n")
-                telefon = osetreni_vyjimek.zadej_cislo("Zadejte telefonní číslo: ", "Neplatné zadání. Je možné zadat pouze číslice, nikoliv písmena.\n")
+                vek = osetreni_vyjimek.zadej_cislo("Zadejte věk pojištěného: ",
+                                                   "Neplatné zadání. Je možné zadat pouze číslice (celá čísla), nikoliv písmena nebo desetinná čísla.\n")
+                telefon = osetreni_vyjimek.zadej_cislo("Zadejte telefonní číslo pojištěného: ",
+                                                       "Neplatné zadání. Je možné zadat pouze číslice (celá čísla), nikoliv písmena nebo desetinná čísla.\n")
                 akce_pojistenych.pridej_pojisteneho(jmeno, prijmeni, vek, telefon)
                 print(f"\nV pořádku, pojištěný {jmeno} {prijmeni} byl úspěšně vložený do evidence.\n")
 
