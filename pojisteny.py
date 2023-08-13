@@ -16,5 +16,6 @@ class Pojisteny:
         """
         Vrací textovou reprezentaci pojištěného,
         jednotlivé atributy jsou oddělené mezerami.
+        :return: Pojištěný (jméno, příjmení, věk, telefon)
         """
         return str("{0:<8} {1:<8} {2:<8} {3:<8}".format(self._jmeno, self._prijmeni, self._vek, self._telefon))

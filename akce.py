@@ -8,12 +8,16 @@ class AkcePojistenych:
     """
 
     def __init__(self):
-        self.seznam_pojistencu = []
+        self.seznam_pojistencu = []    # Seznam pojištěnců
 
     def pridej_pojisteneho(self, jmeno, prijmeni, vek, telefon):
         """
         Přidá zadaného pojištěného od uživatele (inputem)
-        do seznamu pojištěnců.
+        do kolekce (seznamu pojištěnců).
+        :param jmeno: Jméno pojištěného
+        :param prijmeni: Příjmení pojištěného
+        :param vek: Věk pojištěného
+        :param telefon: Telefon pojištěného
         """
         pojisteny = Pojisteny(jmeno, prijmeni, vek, telefon)
         self.seznam_pojistencu.append(pojisteny)
@@ -36,6 +40,9 @@ class AkcePojistenych:
         """
         Vyhledá pojištěného nebo seznam všech
         dříve zadaných pojištěných.
+        :param jmeno: Jméno pojištěného
+        :param prijmeni: Příjmení pojištěného
+        :return: Vyhledaný pojištěný
         """
         for pojisteny in self.seznam_pojistencu:
             if pojisteny._jmeno == jmeno and pojisteny._prijmeni == prijmeni:

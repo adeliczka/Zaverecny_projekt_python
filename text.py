@@ -27,14 +27,14 @@ class TextKonzoloveAplikace:
             # Název aplikace
             print("______________________________\nEvidence pojištěných\n______________________________\n")
 
-            # Dostupné možnosti, které může zvolit uživatel
+            # Dostupné možnosti, které může uživatel zvolit
             print("Vyberte si jednu z následujících akcí: ")
             print("1 - Přidat nového pojištěného")
             print("2 - Vypsat všechny pojištěné")
             print("3 - Vyhledat pojištěného")
             print("4 - Ukončit evidenci pojištěných \n")
 
-            # Vstup od uživatele
+            # Vstup od uživatele a uložení výsledku do proměnné volba
             volba = input("Zadejte svou volbu: \n")
 
             # Následuje blok kódu s podmínkami vztahujícímí se k volbě uživatele
@@ -48,6 +48,7 @@ class TextKonzoloveAplikace:
                                                        "Neplatné zadání. Je možné zadat pouze číslice (celá čísla), nikoliv písmena nebo desetinná čísla.\n")
                 akce_pojistenych.pridej_pojisteneho(jmeno, prijmeni, vek, telefon)
                 print(f"\nV pořádku, pojištěný {jmeno} {prijmeni} byl úspěšně vložený do evidence.\n")
+# Jak provést, aby se při najetí myši na metodu zobrazila dokumentace jako v souboru akce.py??
 
             elif volba == "2":
                 # Vypsání pojištěnce
