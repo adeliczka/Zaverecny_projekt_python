@@ -1,14 +1,14 @@
-from akce import AkcePojistenych
-from vyjimka import OsetreniVyjimek
+from spravce import SpravcePojistenych
+from vyjimka import OsetrovacVyjimek
 
-# Vytvoření instance náležící třídě AkcePojistenych
-akce_pojistenych = AkcePojistenych()
+# Vytvoření instance náležící třídě SpravcePojistenych
+spravce_pojistenych = SpravcePojistenych()
 
-# Vytvoření instance náležící třídě OsetreniVyjimek
-osetreni_vyjimek = OsetreniVyjimek()
+# Vytvoření instance náležící třídě OsetrovacVyjimek
+osetrovac_vyjimek = OsetrovacVyjimek()
 
 
-class TextKonzoloveAplikace:
+class UvodKonzoloveAplikace:
     """
     Třída reprezentující texty a komunikaci
     konzolové aplikace s uživatelem.
@@ -18,7 +18,7 @@ class TextKonzoloveAplikace:
         pass
 
 
-    def vypis_text(self):
+    def nastartuj(self):
         """
         Vytiskne název aplikace a veškeré dostupné
         možnosti, které dokáže provést konzolová aplikace.
@@ -42,22 +42,25 @@ class TextKonzoloveAplikace:
                 # Přidání pojištěnce
                 jmeno = input("Zadejte jméno pojištěného: ")
                 prijmeni = input("Zadejte příjmení pojištěného: ")
-                vek = osetreni_vyjimek.zadej_cislo("Zadejte věk pojištěného: ",
-                                                   "Neplatné zadání. Je možné zadat pouze číslice (celá čísla), nikoliv písmena nebo desetinná čísla.\n")
-                telefon = osetreni_vyjimek.zadej_cislo("Zadejte telefonní číslo pojištěného: ",
-                                                       "Neplatné zadání. Je možné zadat pouze číslice (celá čísla), nikoliv písmena nebo desetinná čísla.\n")
-                akce_pojistenych.pridej_pojisteneho(jmeno, prijmeni, vek, telefon)
+                vek = osetrovac_vyjimek.zadej_cislo("Zadejte věk pojištěného: ",
+                                                   "Neplatné zadání. Je možné zadat pouze číslice (celá čísla), "
+                                                   "nikoliv písmena nebo desetinná čísla.\n")
+                telefon = osetrovac_vyjimek.zadej_cislo("Zadejte telefonní číslo pojištěného: ",
+                                                       "Neplatné zadání. Je možné zadat pouze číslice (celá čísla), "
+                                                       "nikoliv písmena nebo desetinná čísla.\n")
+                spravce_pojistenych.pridej_pojisteneho(jmeno, prijmeni, vek, telefon)
                 print(f"\nV pořádku, pojištěný {jmeno} {prijmeni} byl úspěšně vložený do evidence.\n")
+
 
             elif volba == "2":
                 # Vypsání pojištěnce
-                akce_pojistenych.vypis_pojistene()
+                spravce_pojistenych.vypis_pojistene()
 
             elif volba == "3":
                 # Vyhledání pojištěnce
                 jmeno = input("Zadejte jméno pojištěného: ")
                 prijmeni = input("Zadejte příjmení pojištěného: ")
-                vyhledany_pojisteny = akce_pojistenych.vyhledej_pojistene(jmeno, prijmeni)
+                vyhledany_pojisteny = spravce_pojistenych.vyhledej_pojistene(jmeno, prijmeni)
                 if vyhledany_pojisteny:
                     print("\nKompletní data vyhledaného pojištěného:")
                     print(vyhledany_pojisteny)
