@@ -1,5 +1,5 @@
-import aplikace
 from pojisteny import Pojisteny
+
 
 class SpravcePojistenych:
     """
