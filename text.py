@@ -48,7 +48,6 @@ class TextKonzoloveAplikace:
                                                        "Neplatné zadání. Je možné zadat pouze číslice (celá čísla), nikoliv písmena nebo desetinná čísla.\n")
                 akce_pojistenych.pridej_pojisteneho(jmeno, prijmeni, vek, telefon)
                 print(f"\nV pořádku, pojištěný {jmeno} {prijmeni} byl úspěšně vložený do evidence.\n")
-# Jak provést, aby se při najetí myši na metodu zobrazila dokumentace jako v souboru akce.py??
 
             elif volba == "2":
                 # Vypsání pojištěnce
